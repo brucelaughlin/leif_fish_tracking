@@ -58,7 +58,8 @@ run_durations.append(300)
 
 # Define timesteps (in minutes) 
 run_calc = 60
-run_save = 1440
+run_save = 60
+#run_save = 1440
 # convert timesteps to seconds
 dt_calc = run_calc * 60
 dt_save = run_save * 60;
