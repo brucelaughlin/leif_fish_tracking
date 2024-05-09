@@ -44,7 +44,7 @@ for filename in filename_list:
     dset = netCDF4.Dataset(filename, 'r')
     lon_initial.append(list(np.array(dset['lon']).flatten())[-1]);
     lat_initial.append(list(np.array(dset['lat']).flatten())[-1]);
-   
+    dset.close()   
 
 # Insert the "Initial Latitude" column as the 5th column
 df.insert(4, "Initial Latitude", lat_initial)
