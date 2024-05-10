@@ -23,15 +23,25 @@ csv_file="LocationDateForBruce.xlsx"
 
 # Run Opendrift for all rows in the provided .xlxs sheet
 python run_opendrift.py $csv_file
-# Create a modified .xlxs sheet with final (err, initial!) locations added as columns
-python modify_leif_csv.py
 
-# Generate some simple plots and animations
-outputDir=$(pwd)/z_output
-fileArray=(${outputDir}/tracking_output_*.nc) 
-for file in ${fileArray[@]}
-do
-    python plot_animate_local.py $file
-done
+
+
+
+
+
+# ---------------------------------------------------
+# Modifying CSV sheet and making plots is unecessary
+# ---------------------------------------------------
+
+## Create a modified .xlxs sheet with final (err, initial!) locations added as columns
+#python modify_leif_csv.py
+
+## Generate some simple plots and animations
+#outputDir=$(pwd)/z_output
+#fileArray=(${outputDir}/tracking_output_*.nc) 
+#for file in ${fileArray[@]}
+#do
+#    python plot_animate_local.py $file
+#done
 
 

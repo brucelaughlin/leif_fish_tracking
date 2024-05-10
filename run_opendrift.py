@@ -136,7 +136,13 @@ for idx, row in df.iterrows():
 
     # Seed the particle
     #o.seed_elements(lon=lon, lat=lat, time=time_fish, object_type=object_type_number)
-    o.seed_elements(lon=lon, lat=lat, time=time_fish)
+    #o.seed_elements(lon=lon, lat=lat, time=time_fish)
+    o.seed_elements(lon=lon, lat=lat, time=time_fish, radius=1000, number=5000)
 
     o.run(outfile=tracking_output_file, duration=timedelta(days=run_durations[idx]), time_step=dt_calc, time_step_output=dt_save)
+
+
+
+
+
 
